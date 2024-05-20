@@ -1,2 +1,2 @@
-FROM ./llama-7b-alpaca-light-Q4_K_M.gguf
+FROM ~/models/lightfivex/llama-alpaca-light/llama-7b-alpaca-light-Q4_K_M.gguf
 TEMPLATE "[INST] {{ .Prompt }} [/INST]"

@@ -21,15 +21,21 @@ echo "hgModelName: $hgModelName"
 echo "ollamaModel: $ollamaModel"
 echo "ollamaModelfile: $ollamaModelfile"
 
-wkdir=`~/models/llama2-light`
+wkdir=/Users/`whoami`/models/$ollamaModel
 if [ ! -d $wkdir ]; then
     mkdir -p $wkdir
 fi
 
 cd $wkdir
+echo "Current directory: `pwd`"
 
-#download
-huggingface-cli  download $hgModel $hgModelName --local-dir $wkdir
+#test if exists
+if [ -f $hgModelName ]; then
+    echo "Model $hgModelName already exists, skip downloading."
+else
+    huggingface-cli  download $hgModel $hgModelName --local-dir $wkdir
+fi
+
 
 #build
 ollama create -f $ollamaModelfile $ollamaModel
