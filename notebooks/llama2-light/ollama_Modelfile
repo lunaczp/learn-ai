@@ -1,0 +1,2 @@
+FROM ./llama-2-7b-light-Q4_K_M.gguf
+TEMPLATE "[INST] {{ .Prompt }} [/INST]"
