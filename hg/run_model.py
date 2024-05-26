@@ -10,5 +10,5 @@ model=sys.argv[1]
 msg=sys.argv[2]
 
 pipe = pipeline("text-generation", model=model)
-results = pipe(msg)
+results = pipe(msg, max_length=200, num_return_sequences=1)
 print(results)
