@@ -1,5 +1,8 @@
 # 训练中文llama
 
+## Attempts
+- [train opt-125m with stanford alpaca original code](https://github.com/lunaczp/stanford_alpaca/blob/main/train.lux.md)
+
 ## 参考
 这些是一些基于stanford alpaca的项目(one based on another)：
 - [stanford alpaca](https://github.com/tatsu-lab/stanford_alpaca)
